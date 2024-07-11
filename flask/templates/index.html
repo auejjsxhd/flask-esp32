@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ESP32-CAM Captured Photo Gallery</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  </head>
+  <body style="background-color:#202125;">
+    <div class="container" style="margin-top:5%;">
+      <div class="d-flex align-items-center">
+        <div class="col-md-6" style="padding:10px; border:1px solid black; border-radius: 5px;">
+          <h2 style="color:#FEFFFF;">Test Upload</h2>
+          <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">  
+            <div class="form-group">
+              <label for="image" style="color:#FEFFFF;">Input Image:</label>
+              <input type="file" name="imageFile" id="imageFile" class="form-control">
+            </div>
+            <br>
+            <input type="submit" value="Upload Image" name="submit" class="btn btn-primary">
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
